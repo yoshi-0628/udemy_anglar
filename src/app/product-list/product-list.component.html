@@ -1,14 +1,8 @@
-<h1>{{ name }}</h1>
-<h2>在庫：{{ stock }}</h2>
-<h3>サンプルテキスト</h3>
-
-<h1>ipad</h1>
-<h2>プロダクト</h2>
-<h3>サンプルテキスト</h3>
-
-<h1>apple watch</h1>
-<h2>プロダクト</h2>
-<h3>サンプルテキスト</h3>
+<div *ngFor="let product of products">
+    <h1>{{ product.name }}</h1>
+    <h2>在庫：{{ product.stock }}</h2>
+    <h3 *ngIf="false">{{product.description}}</h3>
+</div>
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
