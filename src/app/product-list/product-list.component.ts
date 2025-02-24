@@ -16,6 +16,10 @@ export class ProductListComponent {
   share() {
     window.alert('この商品はシェアされました');
   }
+
+  notify() {
+    window.alert('この商品を入荷したら通知します');
+  }
 }
 
 /*
