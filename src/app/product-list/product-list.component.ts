@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { products } from '../products';
+import { Product } from '../products';
 
 @Component({
   selector: 'app-product-list',
@@ -8,30 +9,12 @@ import { products } from '../products';
   styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent {
-  // products = [...products];
-  products = [
-    {
-      name: 'iPhone',
-      stock: 30,
-      description: 'サンプルテキスト'
-    }, {
-      name: 'iPad',
-      stock: 12,
-      description: 'タブレットです'
-    }, {
-      name: 'Apple Watch',
-      stock: 32,
-      description: '時計です'
-    }
-  ];
+  // 「...」というのは配列形式の複数のオブジェクトで入ってくるということ
+  products: Product[] = [...products];
+  number: any = 5;
 
-  product2 = {
-    name: 'iPad',
-    stock: 12,
-    description: 'タブレットです'
-  };
   share() {
-    window.alert('The product has been shared!');
+    window.alert('この商品はシェアされました');
   }
 }
 

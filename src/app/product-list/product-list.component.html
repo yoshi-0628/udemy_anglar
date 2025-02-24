@@ -1,7 +1,14 @@
 <div *ngFor="let product of products">
-    <h1>{{ product.name }}</h1>
-    <h2>在庫：{{ product.stock }}</h2>
-    <h3 *ngIf="false">{{product.description}}</h3>
+    <h1>
+        <a [title]="product.name + '詳細'">
+            {{ product.name }}
+        </a>
+    </h1>
+    <h2>価格：{{ product.price }}</h2>
+    <h3>在庫：{{ product.stock }}</h3>
+    <p *ngIf="true">{{product.description}}</p>
+
+    <button (click)="share()">シェアする</button>
 </div>
 
 <!-- 
